@@ -8,7 +8,7 @@ import demjson
 
 def clear_html_re(src_html):
     '''
-    正则清除HTML标签
+    正则清除HTML标签898
     :param src_html:原文本
     :return: 清除后的文本
     '''
@@ -53,6 +53,7 @@ class NGA(object):
             return True
         else:
             logging("没有检测到cookies，请输入一个...")
+            logging('Tips:使用cookies登录，从控制台-网络-当前网址-标头中找到字符串形式存储的cookies作为参数传入。')
             cookie_str = input()
             self.cookies = set_cookies(cookie_str)
             with open("cookies", "w") as f:
